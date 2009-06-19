@@ -7,8 +7,8 @@
     <language>en</language>
     <item>
         <title>Remedie Player 0.5</title>
-		<enclosure sparkle:version="0.5" url="https://files.getdropbox.com/u/1025/remedie/Remedie Player.zip" length="1300000" type="application/octet-stream"/>
-        <sparkle:releaseNotesLink>http://dl.getdropbox.com/u/1025/remedie/remedie.html</sparkle:releaseNotesLink>
+		<enclosure sparkle:version="0.5" url="https://files.getdropbox.com/u/1025/remedie/Remedie Player.zip" length="1000000" type="application/octet-stream"/>
+        <sparkle:releaseNotesLink>http://github.com/drikin/Remedie-Player/raw/master/Sparkle/remedie.html</sparkle:releaseNotesLink>
     </item> 
 </channel>
 </rss>
