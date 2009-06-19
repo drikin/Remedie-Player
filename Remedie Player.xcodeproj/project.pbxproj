@@ -12,6 +12,10 @@
 		8D11072B0486CEB800E47090 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 089C165CFE840E0CC02AAC07 /* InfoPlist.strings */; };
 		8D11072D0486CEB800E47090 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 29B97316FDCFA39411CA2CEA /* main.m */; settings = {ATTRIBUTES = (); }; };
 		8D11072F0486CEB800E47090 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */; };
+		D72A2AF60FEB782600D5DDE3 /* Sparkle.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D72A2AF50FEB782600D5DDE3 /* Sparkle.framework */; };
+		D72A2B030FEB782900D5DDE3 /* Sparkle.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = D72A2AF50FEB782600D5DDE3 /* Sparkle.framework */; };
+		D72A2B1E0FEB7CB900D5DDE3 /* remedie.html in Resources */ = {isa = PBXBuildFile; fileRef = D72A2B1C0FEB7CB900D5DDE3 /* remedie.html */; };
+		D72A2B1F0FEB7CB900D5DDE3 /* remedie.xml in Resources */ = {isa = PBXBuildFile; fileRef = D72A2B1D0FEB7CB900D5DDE3 /* remedie.xml */; };
 		D7520BD10FEA080500070771 /* MultiClickRemoteBehavior.m in Sources */ = {isa = PBXBuildFile; fileRef = D7520BC20FEA080500070771 /* MultiClickRemoteBehavior.m */; };
 		D7520BD20FEA080500070771 /* RemoteControl.m in Sources */ = {isa = PBXBuildFile; fileRef = D7520BC50FEA080500070771 /* RemoteControl.m */; };
 		D7520BD30FEA080500070771 /* HIDRemoteControlDevice.m in Sources */ = {isa = PBXBuildFile; fileRef = D7520BC70FEA080500070771 /* HIDRemoteControlDevice.m */; };
@@ -29,8 +33,6 @@
 		D7F4BC180FE8E28200EA1F45 /* stop_remedie.applescript in CopyFiles */ = {isa = PBXBuildFile; fileRef = D7F4BBF10FE8E1D300EA1F45 /* stop_remedie.applescript */; };
 		D7F4D4670FE94DE600EA1F45 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D7F4D4660FE94DE600EA1F45 /* QuartzCore.framework */; };
 		D7F4D6BC0FE95F2200EA1F45 /* Carbon.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D7F4D6BB0FE95F2200EA1F45 /* Carbon.framework */; };
-		D7F4D79F0FE9746C00EA1F45 /* Sparkle.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D7F4D79E0FE9746C00EA1F45 /* Sparkle.framework */; };
-		D7F4D7A10FE9747E00EA1F45 /* Sparkle.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = D7F4D79E0FE9746C00EA1F45 /* Sparkle.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -51,7 +53,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				D7F4D7A10FE9747E00EA1F45 /* Sparkle.framework in CopyFiles */,
+				D72A2B030FEB782900D5DDE3 /* Sparkle.framework in CopyFiles */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -70,6 +72,9 @@
 		29B97325FDCFA39411CA2CEA /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = /System/Library/Frameworks/Foundation.framework; sourceTree = "<absolute>"; };
 		8D1107310486CEB800E47090 /* Remedie_Player-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "Remedie_Player-Info.plist"; sourceTree = "<group>"; };
 		8D1107320486CEB800E47090 /* Remedie Player.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Remedie Player.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		D72A2AF50FEB782600D5DDE3 /* Sparkle.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Sparkle.framework; path = ../Sparkle.framework; sourceTree = SOURCE_ROOT; };
+		D72A2B1C0FEB7CB900D5DDE3 /* remedie.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; name = remedie.html; path = ../../../Dropbox/Public/remedie/remedie.html; sourceTree = SOURCE_ROOT; };
+		D72A2B1D0FEB7CB900D5DDE3 /* remedie.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; name = remedie.xml; path = ../../../Dropbox/Public/remedie/remedie.xml; sourceTree = SOURCE_ROOT; };
 		D7520BC10FEA080500070771 /* MultiClickRemoteBehavior.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MultiClickRemoteBehavior.h; path = ../BBT2/RemoteControlWrapper_R962/MultiClickRemoteBehavior.h; sourceTree = SOURCE_ROOT; };
 		D7520BC20FEA080500070771 /* MultiClickRemoteBehavior.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MultiClickRemoteBehavior.m; path = ../BBT2/RemoteControlWrapper_R962/MultiClickRemoteBehavior.m; sourceTree = SOURCE_ROOT; };
 		D7520BC40FEA080500070771 /* RemoteControl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RemoteControl.h; path = ../BBT2/RemoteControlWrapper_R962/RemoteControl.h; sourceTree = SOURCE_ROOT; };
@@ -99,8 +104,6 @@
 		D7F4BBF10FE8E1D300EA1F45 /* stop_remedie.applescript */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.applescript; name = stop_remedie.applescript; path = AppleScript/stop_remedie.applescript; sourceTree = "<group>"; };
 		D7F4D4660FE94DE600EA1F45 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		D7F4D6BB0FE95F2200EA1F45 /* Carbon.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Carbon.framework; path = System/Library/Frameworks/Carbon.framework; sourceTree = SDKROOT; };
-		D7F4D7870FE9740A00EA1F45 /* Sparkle.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Sparkle.framework; path = /Users/koh/Development/Project/Sparkle.framework; sourceTree = "<absolute>"; };
-		D7F4D79E0FE9746C00EA1F45 /* Sparkle.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Sparkle.framework; path = ../Sparkle.framework; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -112,8 +115,8 @@
 				D7F4BBCF0FE85C8E00EA1F45 /* WebKit.framework in Frameworks */,
 				D7F4D4670FE94DE600EA1F45 /* QuartzCore.framework in Frameworks */,
 				D7F4D6BC0FE95F2200EA1F45 /* Carbon.framework in Frameworks */,
-				D7F4D79F0FE9746C00EA1F45 /* Sparkle.framework in Frameworks */,
 				D7520BDB0FEA082300070771 /* IOKit.framework in Frameworks */,
+				D72A2AF60FEB782600D5DDE3 /* Sparkle.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -132,7 +135,8 @@
 		1058C7A0FEA54F0111CA2CBB /* Linked Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				D7F4D7870FE9740A00EA1F45 /* Sparkle.framework */,
+				D72A2AF50FEB782600D5DDE3 /* Sparkle.framework */,
+				D7520BDA0FEA082300070771 /* IOKit.framework */,
 				D7F4D6BB0FE95F2200EA1F45 /* Carbon.framework */,
 				D7F4BBCE0FE85C8D00EA1F45 /* WebKit.framework */,
 				D7F4D4660FE94DE600EA1F45 /* QuartzCore.framework */,
@@ -162,6 +166,7 @@
 		29B97314FDCFA39411CA2CEA /* Remedie Player */ = {
 			isa = PBXGroup;
 			children = (
+				D72A2B230FEB7D5800D5DDE3 /* Sparkle */,
 				D7520BBF0FEA07F200070771 /* Remote */,
 				D7F4D3E00FE93E6500EA1F45 /* UIClasses */,
 				D7F4D32D0FE8F4A200EA1F45 /* DKClasses */,
@@ -171,7 +176,6 @@
 				29B97317FDCFA39411CA2CEA /* Resources */,
 				29B97323FDCFA39411CA2CEA /* Frameworks */,
 				19C28FACFE9D520D11CA2CBB /* Products */,
-				D7520BDA0FEA082300070771 /* IOKit.framework */,
 			);
 			name = "Remedie Player";
 			sourceTree = "<group>";
@@ -189,7 +193,6 @@
 			isa = PBXGroup;
 			children = (
 				D7520C920FEA2E8100070771 /* icon.icns */,
-				D7F4D79E0FE9746C00EA1F45 /* Sparkle.framework */,
 				8D1107310486CEB800E47090 /* Remedie_Player-Info.plist */,
 				089C165CFE840E0CC02AAC07 /* InfoPlist.strings */,
 				1DDD58140DA1D0A300B32029 /* MainMenu.xib */,
@@ -204,6 +207,15 @@
 				1058C7A2FEA54F0111CA2CBB /* Other Frameworks */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		D72A2B230FEB7D5800D5DDE3 /* Sparkle */ = {
+			isa = PBXGroup;
+			children = (
+				D72A2B1C0FEB7CB900D5DDE3 /* remedie.html */,
+				D72A2B1D0FEB7CB900D5DDE3 /* remedie.xml */,
+			);
+			name = Sparkle;
 			sourceTree = "<group>";
 		};
 		D7520BBF0FEA07F200070771 /* Remote */ = {
@@ -330,6 +342,8 @@
 				8D11072B0486CEB800E47090 /* InfoPlist.strings in Resources */,
 				1DDD58160DA1D0A300B32029 /* MainMenu.xib in Resources */,
 				D7520C930FEA2E8100070771 /* icon.icns in Resources */,
+				D72A2B1E0FEB7CB900D5DDE3 /* remedie.html in Resources */,
+				D72A2B1F0FEB7CB900D5DDE3 /* remedie.xml in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -386,6 +400,7 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)/..\"",
+					"\"$(SRCROOT)\"",
 				);
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_ENABLE_FIX_AND_CONTINUE = YES;
@@ -395,6 +410,10 @@
 				GCC_PREFIX_HEADER = Remedie_Player_Prefix.pch;
 				INFOPLIST_FILE = "Remedie_Player-Info.plist";
 				INSTALL_PATH = "$(HOME)/Applications";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/Sparkle.framework\"",
+				);
 				PRODUCT_NAME = "Remedie Player";
 				SDKROOT = macosx10.5;
 			};
@@ -409,12 +428,17 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)/..\"",
+					"\"$(SRCROOT)\"",
 				);
 				GCC_MODEL_TUNING = G5;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = Remedie_Player_Prefix.pch;
 				INFOPLIST_FILE = "Remedie_Player-Info.plist";
 				INSTALL_PATH = "$(HOME)/Applications";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/Sparkle.framework\"",
+				);
 				PRODUCT_NAME = "Remedie Player";
 				SDKROOT = macosx10.5;
 			};
