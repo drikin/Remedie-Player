@@ -16,6 +16,7 @@
 		D72A2B030FEB782900D5DDE3 /* Sparkle.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = D72A2AF50FEB782600D5DDE3 /* Sparkle.framework */; };
 		D72A2B1E0FEB7CB900D5DDE3 /* remedie.html in Resources */ = {isa = PBXBuildFile; fileRef = D72A2B1C0FEB7CB900D5DDE3 /* remedie.html */; };
 		D72A2B1F0FEB7CB900D5DDE3 /* remedie.xml in Resources */ = {isa = PBXBuildFile; fileRef = D72A2B1D0FEB7CB900D5DDE3 /* remedie.xml */; };
+		D72F47B20FED7C4700DB3CC0 /* NSURL+DK.m in Sources */ = {isa = PBXBuildFile; fileRef = D72F47B10FED7C4700DB3CC0 /* NSURL+DK.m */; };
 		D7520BD10FEA080500070771 /* MultiClickRemoteBehavior.m in Sources */ = {isa = PBXBuildFile; fileRef = D7520BC20FEA080500070771 /* MultiClickRemoteBehavior.m */; };
 		D7520BD20FEA080500070771 /* RemoteControl.m in Sources */ = {isa = PBXBuildFile; fileRef = D7520BC50FEA080500070771 /* RemoteControl.m */; };
 		D7520BD30FEA080500070771 /* HIDRemoteControlDevice.m in Sources */ = {isa = PBXBuildFile; fileRef = D7520BC70FEA080500070771 /* HIDRemoteControlDevice.m */; };
@@ -75,6 +76,8 @@
 		D72A2AF50FEB782600D5DDE3 /* Sparkle.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Sparkle.framework; path = ../Sparkle.framework; sourceTree = SOURCE_ROOT; };
 		D72A2B1C0FEB7CB900D5DDE3 /* remedie.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; name = remedie.html; path = ../../../Dropbox/Public/remedie/remedie.html; sourceTree = SOURCE_ROOT; };
 		D72A2B1D0FEB7CB900D5DDE3 /* remedie.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; name = remedie.xml; path = ../../../Dropbox/Public/remedie/remedie.xml; sourceTree = SOURCE_ROOT; };
+		D72F47B00FED7C4700DB3CC0 /* NSURL+DK.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSURL+DK.h"; path = "../DKClasses/Cocoa/NSURL+DK.h"; sourceTree = SOURCE_ROOT; };
+		D72F47B10FED7C4700DB3CC0 /* NSURL+DK.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSURL+DK.m"; path = "../DKClasses/Cocoa/NSURL+DK.m"; sourceTree = SOURCE_ROOT; };
 		D7520BC10FEA080500070771 /* MultiClickRemoteBehavior.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MultiClickRemoteBehavior.h; path = ../BBT2/RemoteControlWrapper_R962/MultiClickRemoteBehavior.h; sourceTree = SOURCE_ROOT; };
 		D7520BC20FEA080500070771 /* MultiClickRemoteBehavior.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MultiClickRemoteBehavior.m; path = ../BBT2/RemoteControlWrapper_R962/MultiClickRemoteBehavior.m; sourceTree = SOURCE_ROOT; };
 		D7520BC40FEA080500070771 /* RemoteControl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RemoteControl.h; path = ../BBT2/RemoteControlWrapper_R962/RemoteControl.h; sourceTree = SOURCE_ROOT; };
@@ -277,6 +280,8 @@
 		D7F4D32D0FE8F4A200EA1F45 /* DKClasses */ = {
 			isa = PBXGroup;
 			children = (
+				D72F47B00FED7C4700DB3CC0 /* NSURL+DK.h */,
+				D72F47B10FED7C4700DB3CC0 /* NSURL+DK.m */,
 				D7520CC60FEB042500070771 /* DKGlobal.h */,
 				D7520CC70FEB042F00070771 /* DKScraper.h */,
 				D7520CC80FEB042F00070771 /* DKScraper.m */,
@@ -366,6 +371,7 @@
 				D7520CC50FEB041600070771 /* DKAppleScript.m in Sources */,
 				D7520CCA0FEB042F00070771 /* DKScraper.m in Sources */,
 				D7520CCD0FEB046100070771 /* BorderlessWindow.m in Sources */,
+				D72F47B20FED7C4700DB3CC0 /* NSURL+DK.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

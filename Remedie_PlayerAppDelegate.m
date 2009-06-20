@@ -10,6 +10,9 @@
 #import "Remedie_PlayerAppDelegate.h"
 #import "DKAppleScript.h"
 
+#define REMEDIE_TOP_URL         @"http://127.0.0.1:10010/"
+#define REMEDIE_SUBSCRIBE_URL  @"http://localhost:10010/#subscribe/"
+
 @implementation Remedie_PlayerAppDelegate
 
 @synthesize window, fullscreen, webView;
@@ -38,17 +41,22 @@
 
 - (void)test
 {
-  [scraper test:@"http://127.0.0.1:10010/"];
+  [scraper test:REMEDIE_TOP_URL];
 }
 
 - (IBAction)goHome:(id)sender;
 {
-  [webView setMainFrameURL:@"http://127.0.0.1:10010/"];
+  [webView setMainFrameURL:REMEDIE_TOP_URL];
 }
 
 - (IBAction)goSubscribe:(id)sender;
 {
-  [webView setMainFrameURL:@"http://localhost:10010/#subscribe/"]; //http://localhost:10010/#subscribe/{URL}
+  [webView setMainFrameURL:REMEDIE_SUBSCRIBE_URL];
+}
+
+- (IBAction)openRemedieWithBrowser:(id)sender;
+{
+  [[NSURL URLWithString:REMEDIE_TOP_URL] open];
 }
 
 - (IBAction)fullscreen:(id)sender;
@@ -132,6 +140,9 @@
 	CGSetLocalEventsSuppressionInterval(0.25);
 }
 
+#pragma mark -
+#pragma mark RemoteControl delegate
+
 - (void)sendRemoteButtonEvent:(RemoteControlEventIdentifier) event
                   pressedDown:(BOOL) pressedDown
                 remoteControl:(RemoteControl*) remoteControl;
@@ -163,11 +174,38 @@
   }
 }
 
+#pragma mark -
+#pragma mark DKScraper delegate
+
 - (void)scrappingDidProceed:(id)data dataTypeName:(NSString*)label;
 {
   NSLog(@"%@", label);
   [self goHome:self];
   [remedieChecker invalidate];
   [window makeKeyAndOrderFront:self];
+}
+
+#pragma mark -
+#pragma mark UIDelegate
+
+- (BOOL)webView:(WebView *)sender runJavaScriptConfirmPanelWithMessage:(NSString *)message initiatedByFrame:(WebFrame *)frame
+{
+  NSAlert *alert;
+  int     result;
+  
+  alert = [[[NSAlert alloc] init] autorelease];
+  [alert setMessageText:@"Remedie dialog"];
+  [alert setInformativeText:message];
+  [alert setAlertStyle:NSInformationalAlertStyle];
+  [alert addButtonWithTitle:@"OK"];
+  [alert addButtonWithTitle:@"Cancel"];
+  
+  result = [alert runModal];
+  
+  if (result == NSAlertFirstButtonReturn) {
+    return YES;
+  }
+  
+  return NO;
 }
 @end

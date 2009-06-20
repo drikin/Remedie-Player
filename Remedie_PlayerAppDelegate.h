@@ -28,6 +28,8 @@
 - (IBAction)goHome:(id)sender;
 - (IBAction)goSubscribe:(id)sender;
 
+- (IBAction)openRemedieWithBrowser:(id)sender;
+
 - (IBAction)fullscreen:(id)sender;
 
 - (void)remoteUp;

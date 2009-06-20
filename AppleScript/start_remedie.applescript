@@ -1,5 +1,5 @@
-start()
-on start()
+start {}
+on start {}
 	try
 		tell application "Finder" to set pwd to POSIX path of (parent of (path to me) as text)
 		set script_path to pwd & "../Core/Resources"
@@ -8,7 +8,7 @@ on start()
 			do shell script "cd '" & script_path & "';/bin/sh ./script &> /dev/null & echo $!"
 		on error
 			do shell script "open -a 'Remedie Server'"
-						do shell script "open -a 'Remedie Player'"
+			tell application "Remedie Player" to activate
 		end try
 	end try
 end start
