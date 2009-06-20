@@ -7,7 +7,5 @@ on start()
 			do shell script "ls '" & script_path & "'/script"
 			do shell script "ps -ef | grep 'remedie-server.pl' | awk '{print$2}' |  xargs kill -9"
 		end try
-	on error
-		beep
 	end try
 end start

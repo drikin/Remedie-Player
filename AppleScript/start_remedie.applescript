@@ -6,8 +6,9 @@ on start()
 		try
 			do shell script "ls '" & script_path & "'/script"
 			do shell script "cd '" & script_path & "';/bin/sh ./script &> /dev/null & echo $!"
+		on error
+			do shell script "open -a 'Remedie Server'"
+						do shell script "open -a 'Remedie Player'"
 		end try
-	on error
-		beep
 	end try
 end start
