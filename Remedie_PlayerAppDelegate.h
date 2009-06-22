@@ -32,6 +32,10 @@
 
 - (IBAction)fullscreen:(id)sender;
 
+- (void)registBonjour:(id)theDelegate;
+
+#pragma mark -
+#pragma mark RemoteControl
 - (void)remoteUp;
 - (void)remoteDown;
 - (void)remoteLeft;
@@ -39,8 +43,13 @@
 - (void)remoteMenu;
 - (void)remotePlay;
 
+#pragma mark -
+#pragma mark RemoteControl delegate
 - (void)sendRemoteButtonEvent:(RemoteControlEventIdentifier) event
                   pressedDown:(BOOL) pressedDown
                 remoteControl:(RemoteControl*) remoteControl;
+
+#pragma mark -
+#pragma mark DKScraper delegate
 - (void)scrappingDidProceed:(id)data dataTypeName:(NSString*)label;
 @end

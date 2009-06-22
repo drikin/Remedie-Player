@@ -26,6 +26,8 @@
 
 	remoteControl = [[[AppleRemote alloc] initWithDelegate: self] retain];
 	[remoteControl startListening:self];
+  
+  [self registBonjour:self];
 }
 
 - (void)applicationWillTerminate:(NSNotification *)aNotification {
@@ -80,6 +82,22 @@
   }
 }
 
+- (void)registBonjour:(id)theDelegate
+{
+  NSNetServiceBrowser *serviceBrowser;
+  serviceBrowser = [[[NSNetServiceBrowser alloc] init] autorelease];
+  [serviceBrowser retain];
+  [serviceBrowser setDelegate:theDelegate];
+  [serviceBrowser searchForServicesOfType:@"_remedie._tcp" inDomain:@""];
+}
+
+- (void)netServiceBrowser:(NSNetServiceBrowser *)netServiceBrowser didFindService:(NSNetService *)netService moreComing:(BOOL)moreServicesComing
+{
+  NSLog(@"Bonjour: %@", netService);
+}
+
+#pragma mark -
+#pragma mark RemoteControl
 - (void)remoteUp;
 {
   CGSetLocalEventsSuppressionInterval(0.0);
