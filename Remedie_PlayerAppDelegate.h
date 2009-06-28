@@ -14,6 +14,7 @@
 
 @interface Remedie_PlayerAppDelegate : NSObject {
   NSWindow      *window;
+  NSWindow      *preferenceWindow;
   NSWindow      *fullscreen;
   WebView       *webView;
   DKScraper     *scraper;
@@ -22,12 +23,14 @@
 }
 
 @property (assign) IBOutlet NSWindow  *window;
+@property (assign) IBOutlet NSWindow  *preferenceWindow;
 @property (assign) IBOutlet NSWindow  *fullscreen;
 @property (assign) IBOutlet WebView   *webView;
 
 - (IBAction)goHome:(id)sender;
 - (IBAction)goSubscribe:(id)sender;
 
+- (IBAction)openPreference:(id)sender;
 - (IBAction)openRemedieWithBrowser:(id)sender;
 
 - (IBAction)fullscreen:(id)sender;

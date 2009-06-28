@@ -15,17 +15,27 @@
 
 @implementation Remedie_PlayerAppDelegate
 
-@synthesize window, fullscreen, webView;
+@synthesize window, preferenceWindow, fullscreen, webView;
++ (void)initialize
+{
+  NSDictionary *initial_values =
+  [NSDictionary dictionaryWithObjectsAndKeys:@"1", @"enableLocalServer",
+                                              nil];
+  
+  [[NSUserDefaultsController sharedUserDefaultsController] setInitialValues:initial_values];
+}
 
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification {
-  [DKAppleScript execute:@"start_remedie"];
   scraper = [[DKScraper alloc] initWithDelegate:self];
   [scraper retain];
-  remedieChecker = [NSTimer scheduledTimerWithTimeInterval:1.0 target:self selector:@selector(test) userInfo:nil repeats:YES];
-  [remedieChecker retain];
 
-	remoteControl = [[[AppleRemote alloc] initWithDelegate: self] retain];
-	[remoteControl startListening:self];
+  if ([[[NSUserDefaultsController sharedUserDefaultsController] valueForKeyPath:@"values.enableLocalServer"] boolValue]) {
+    [DKAppleScript execute:@"start_remedie"];
+    remedieChecker = [NSTimer scheduledTimerWithTimeInterval:1.0 target:self selector:@selector(test) userInfo:nil repeats:YES];
+    [remedieChecker retain];    
+  }
+  remoteControl = [[[AppleRemote alloc] initWithDelegate: self] retain];
+  [remoteControl startListening:self];    
   
   [self registBonjour:self];
 }
@@ -54,6 +64,12 @@
 - (IBAction)goSubscribe:(id)sender;
 {
   [webView setMainFrameURL:REMEDIE_SUBSCRIBE_URL];
+}
+
+- (IBAction)openPreference:(id)sender;
+{
+  [preferenceWindow center];
+  [preferenceWindow makeKeyAndOrderFront:self];
 }
 
 - (IBAction)openRemedieWithBrowser:(id)sender;
